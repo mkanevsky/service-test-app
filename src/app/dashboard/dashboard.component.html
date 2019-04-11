@@ -1,6 +1,43 @@
-<h2>Service Application</h2>
-<ul class="dashboard m-2">
-  <li *ngFor="let element of elements" class="m-2">
-    <span class="btn btn-lg btn-primary">{{element.label}}<BR>{{element.description}}</span> 
-  </li>
-</ul>
+<script src="node_modules/chart.js/Chart.min.js"></script>
+<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+
+<div class="content-panel position-relative overflow-hidden p-3 p-md-3 m-md-3" style="width:380px;height:515px;float:left;">
+  <img src="assets/tool_i550.png" height="350" width="250">
+
+  <div class="position-relative">
+    <table>
+      <tr>
+        <td><div class="led-green"></div></td><td>MCT Machine</td>
+      </tr>
+      <!--tr>
+        <td><div class="led-green"></div></td><td>MU1 Machine</td>
+      </tr-->
+      <tr>
+        <td><div class="led-green"></div></td><td>IPC Machine</td>
+      </tr>
+      <tr>
+        <td><div class="led-green"></div></td><td>Fleet Connectivity</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="content-panel position-relative p-3 p-md-3 m-md-3" style="width:800px;height:515px;float:left;">
+    <div style="display: block">
+      <canvas baseChart
+              [datasets]="ChartData"
+              [labels]="ChartLabels"
+              [options]="ChartOptions"
+              [legend]="ChartLegend"
+              [chartType]="ChartType">
+      </canvas>
+    </div>
+
+  <!--google-chart style="width:100%;height:100%;"
+                [type]="chartType"
+                [title]="chartTitle"
+                [data]="chartData"
+                [columnNames]="myColumnNames"
+                [options]="myOptions">
+  </google-chart-->
+</div>

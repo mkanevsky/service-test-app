@@ -1,2 +1,18 @@
-<h1>{{ title }}</h1>
-<app-dashboard></app-dashboard>
+<nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+
+      <img src="assets/nova_logo.png" height="40px" class="logo">
+    
+
+    <a routerLink="/dashboard"  routerLinkActive="router-link-active" class="py-2 d-none d-md-inline-block">Dashboard</a>
+    <a routerLink="/remote/mct" routerLinkActive="router-link-active" class="py-2 d-none d-md-inline-block">MCT/MU Machine</a>
+    <a routerLink="/remote/ipc" routerLinkActive="router-link-active" class="py-2 d-none d-md-inline-block">IPC Machine</a>
+    <a routerLink="/vmware" routerLinkActive="router-link-active" class="py-2 d-none d-md-inline-block">VMWare ESXi</a>
+    <a routerLink="/ipmi" routerLinkActive="router-link-active" class="py-2 d-none d-md-inline-block">Server IPMI interface</a>
+    <a routerLink="/documentation" routerLinkActive="router-link-active" class="py-2 d-none d-md-inline-block">Documentation</a>
+  </div>
+  <div style="background: rgb(194,28,156); background: linear-gradient(90deg, rgba(194,28,156,1) 0%, rgba(141,127,181,1) 42%);height:10px">
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

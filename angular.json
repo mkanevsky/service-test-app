@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-service-app": {
+    "nova-util-angular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/nova-util-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,7 +25,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
@@ -57,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "test-service-app:build"
+            "browserTarget": "nova-util-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "test-service-app:build:production"
+              "browserTarget": "nova-util-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "test-service-app:build"
+            "browserTarget": "nova-util-angular:build"
           }
         },
         "test": {
@@ -102,7 +103,7 @@
         }
       }
     },
-    "test-service-app-e2e": {
+    "nova-util-angular-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "test-service-app:serve"
+            "devServerTarget": "nova-util-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "test-service-app:serve:production"
+              "devServerTarget": "nova-util-angular:serve:production"
             }
           }
         },
@@ -131,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "test-service-app"
+  "defaultProject": "nova-util-angular"
 }

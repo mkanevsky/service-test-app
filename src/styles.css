@@ -1,1 +1,147 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.container {
+  max-width: 960px;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.nova-panel-header {
+  opacity: 0.1;
+  height: 22px;
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+.site-header {
+  /*background-color: rgba(255, 255, 255, 1.0);*/
+  background-color:#001664;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #fff;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.router-link-active {
+  font-weight: bold;
+  color:#ffffff;
+  padding: 3px;
+  margin: 3px;
+  background-color:#1a2d73;
+  border-radius: 2px;
+  border: solid 1px 	#09102b;
+
+}
+
+.content-panel
+{
+  border: solid 2px 	#8d7fb5;
+  background-color: #fff;
+  box-shadow: 10px 10px  5px rgba(45, 37, 65,0.6);
+  -moz-box-shadow: 10px 10px  5px rgba(45, 37, 65,0.6);
+  -webkit-box-shadow: 10px 10px  5px rgba(45, 37, 65,0.6);
+  -o-box-shadow: 10px 10px  5px rgba(45, 37, 65,0.6);
+}
+
+.led-red {
+  margin: 20px auto;
+  width: 12px;
+  height: 12px;
+  background-color: #940;
+  border-radius: 50%;
+  box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
+}
+
+.led-yellow {
+  margin: 20px auto;
+  width: 12px;
+  height: 12px;
+  background-color: #A90;
+  border-radius: 50%;
+  box-shadow: #000 0 -1px 7px 1px, inset #660 0 -1px 9px, #DD0 0 2px 12px;
+}
+
+.led-green {
+  margin: 10px auto;
+  width: 12px;
+  height: 12px;
+  background-color: #690;
+  border-radius: 50%;
+  box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
+}
+
+tr {
+  height:16px;
+}
+
+td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.flex-equal > * {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden { overflow: hidden; }
